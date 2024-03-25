@@ -6,7 +6,7 @@
       "content": [
         "### Generating ENVI Spectra Libraries with TLSE Data",
         "",
-        "This notebook shows an example of how togenerate ENVI Spectral Libraries using the sprectra data from the TLSE data set. Running the first cell in this notebook will bring up a dialog for you to pick the directory in which the spectral reflectance data is saved.  "
+        "This notebook shows an example of how to generate ENVI Spectral Libraries using the sprectra data from the TLSE data set. Running the first cell in this notebook will bring up a dialog for you to pick the directory in which the spectral reflectance data is saved.  "
       ],
       "metadata": {},
       "outputs": []
@@ -119,7 +119,7 @@
         "e = ENVI()",
         "   ",
         "; Create a new spectral library",
-        "specLibName = e.GetTemporaryFilename('sli')",
+        "specLibName = filepath('tlse.sli', root_dir=inputDirectory) ",
         "specLib = EnviSpectralLibrary(specLibName)",
         "spectraNames = allSpectraHash->keys()",
         "currentHash = allSpectraHash[spectraNames[0]] ",
